@@ -1,29 +1,24 @@
 # vue-renshu2
 
-## Project setup
+https://bamboowonsstring.github.io/vue-renshu2/
+
+## 依存ライブラリのインストール
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### テスト用のサービス起動
 ```
 yarn run serve
 ```
 
-### Compiles and minifies for production
+### コンパイル
 ```
 yarn run build
 ```
 
-### Run your tests
+### gh-pagesにデプロイ
 ```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
+yarn run deploy
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
