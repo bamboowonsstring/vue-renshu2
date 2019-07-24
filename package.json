@@ -8,7 +8,9 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "vue": "^2.6.10"
+    "firebase": "^6.3.1",
+    "vue": "^2.6.10",
+    "vuefire": "^2.1.0"
   },
   "devDependencies": {
     "@vue/cli-service": "^3.9.0",
