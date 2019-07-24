@@ -5,6 +5,13 @@
 </template>
 
 <script>
+import Vue from "vue";
+import VueRouter from 'vue-router'
+import { firestorePlugin } from "vuefire";
+
+Vue.use(firestorePlugin);
+Vue.use(VueRouter)
+
 import VueRegisterMemo from './components/VueRegisterMemo.vue'
 
 export default {
