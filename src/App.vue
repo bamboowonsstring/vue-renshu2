@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <VueEditMemo></VueEditMemo>
+    <VueRegisterMemo></VueRegisterMemo>
   </div>
 </template>
 
 <script>
-import VueEditMemo from './components/VueEditMemo.vue'
+import VueRegisterMemo from './components/VueRegisterMemo.vue'
 
 export default {
   name: 'app',
   components: {
-    VueEditMemo
+    VueRegisterMemo
   }
 }
 </script>

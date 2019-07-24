@@ -1,8 +1,7 @@
 <template>
   <div>
     <textarea rows="10" cols="70" v-model="memo_text"></textarea>
-    <button v-on:click="register_memo" v-if="is_memo_registerd">メモ登録</button>
-    <button v-on:click="update_memo" v-if="!is_memo_registerd">メモ更新</button>
+    <button v-on:click="update_memo">メモ更新</button>
   </div>
 </template>
 <script>
@@ -14,10 +13,10 @@ export default {
   name: "VueEditMemo",
   data: function() {
     return {
-      memo_id: null,
       memo_text: ""
     };
   },
+  props: ["memo_id"],
   computed: {
     is_memo_registerd: function() {
       return this.memo_id == null;
