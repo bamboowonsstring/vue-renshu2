@@ -26,7 +26,7 @@ export default {
       db.collection("memos")
         .doc(this.memo.id)
         .update({ text: this.memo.text })
-        .then(() => console.log("メモ更新成功\t id=" + vue.memo.id))
+        .then(() => console.log("メモ更新成功\t id=" + this.memo.id))
         .catch(error => console.log("メモ更新失敗 \n" + error));
     }
   }
