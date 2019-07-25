@@ -1,7 +1,6 @@
 <template>
   <div>
-    <textarea rows="10" cols="70" v-model="memo_text"></textarea>
-    <button v-on:click="register_memo">メモ登録</button>
+    <button v-on:click="register_memo">メモ新規作成</button>
   </div>
 </template>
 
@@ -11,16 +10,10 @@ import firebase from "firebase/app";
 import "firebase/firestore";
 
 export default {
-  name: "VueEditMemo",
-  data: function() {
-    return {
-      memo_text: ""
-    };
-  },
   methods: {
     register_memo: function(event) {
       db.collection("memos")
-        .add({ text: this.memo_text })
+        .add({ text: "" })
         .then(docref => {
           console.log("メモの登録に成功しました。\n id=" + docref.id);
           this.$router.push({

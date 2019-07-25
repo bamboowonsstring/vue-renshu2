@@ -12,7 +12,7 @@ import { firestorePlugin } from "vuefire";
 Vue.use(firestorePlugin);
 Vue.use(VueRouter);
 
-import VueRegisterMemo from "./components/VueRegisterMemo.vue";
+import VueCreateMemo from "./components/VueCreateMemo.vue";
 import VueUpdateMemo from "./components/VueUpdateMemo.vue";
 
 export default {
@@ -22,8 +22,8 @@ export default {
   },
   router: new VueRouter({
     routes: [
-      { path: "/", component: VueRegisterMemo },
-      { path: "/register", component: VueRegisterMemo },
+      { path: "/", component: VueCreateMemo },
+      { path: "/create", component: VueCreateMemo },
       { path: "/update/:id", component: VueUpdateMemo }
     ]
   })
