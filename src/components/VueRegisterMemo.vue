@@ -4,6 +4,7 @@
     <button v-on:click="register_memo">メモ登録</button>
   </div>
 </template>
+
 <script>
 import { db } from "./db";
 import firebase from "firebase/app";
@@ -18,12 +19,13 @@ export default {
   },
   methods: {
     register_memo: function(event) {
-      var vue = this;
       db.collection("memos")
-        .add({ text: vue.memo_text })
+        .add({ text: this.memo_text })
         .then(docref => {
-          vue.memo_id = docref.id;
-          console.log("メモの登録に成功しました。\n id=" + vue.memo_id);
+          console.log("メモの登録に成功しました。\n id=" + docref.id);
+          this.$router.push({
+            path: "/update/" + docref.id
+          });
         })
         .catch(error => {
           console.log("メモの登録に問題が発生しました。\n" + error);
@@ -32,5 +34,6 @@ export default {
   }
 };
 </script>
+
 <style>
 </style>
