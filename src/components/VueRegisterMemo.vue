@@ -16,6 +16,9 @@ export default {
       memo: {}
     };
   },
+  activated: function() {
+    this.memo = {};
+  },
   methods: {
     register_memo: function(event) {
       db.collection("memos")

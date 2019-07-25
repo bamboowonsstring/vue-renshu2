@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <vue-create-memo></vue-create-memo>
     <router-view></router-view>
   </div>
 </template>
@@ -12,6 +13,7 @@ import { firestorePlugin } from "vuefire";
 Vue.use(firestorePlugin);
 Vue.use(VueRouter);
 
+import VueCreateMemo from "./components/VueCreateMemo.vue";
 import VueRegisterMemo from "./components/VueRegisterMemo.vue";
 import VueUpdateMemo from "./components/VueUpdateMemo.vue";
 
@@ -26,7 +28,10 @@ export default {
       { path: "/create", component: VueRegisterMemo },
       { path: "/update/:id", component: VueUpdateMemo }
     ]
-  })
+  }),
+  components: {
+    VueCreateMemo
+  }
 };
 </script>
 

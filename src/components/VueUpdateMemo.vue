@@ -16,9 +16,9 @@ export default {
       memo: {}
     };
   },
-  mounted: function() {
+  beforeMount: function() {
     this.$bind("memo", db.collection("memos").doc(this.$route.params.id)).then(
-      () => console.log("マウントしました。 \t" + this.memo.id)
+      () => console.log("バインドしました。 \t" + this.memo.id)
     );
   },
   methods: {
